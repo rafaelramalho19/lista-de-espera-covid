@@ -47,7 +47,7 @@ const main = async () => {
 
   console.log("Got value: ", value, "at", new Date());
 
-  await page.close();
+  await browser.close();
 
   if (value && value.startsWith("Neste momento estão a")) {
     return setTimeout(() => main(), 1.2e6 /* 20 minutes */);
